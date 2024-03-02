@@ -94,7 +94,7 @@ contract PUNCHER {
         return calculateEggBuy(eth,ERC20(circle).balanceOf(address(this)));
     }
     function devFee(uint256 amount) public pure returns(uint256){
-        return SafeMath.div(SafeMath.mul(amount,7),100);
+        return SafeMath.div(SafeMath.mul(amount,5),100);
     }
     function seedMarket(uint256 amount) public {
         ERC20(circle).transferFrom(address(msg.sender), address(this), amount);
